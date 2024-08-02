@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,
+    500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+</head>
+<body>
+    <header>
+        <nav class ="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><i class="fa-solid fa-house"></i><a href="#">Inicio</a></li>
+                <li class="nav__li"><i class="fa-solid fa-square-plus"></i>
+                    <a href="#">Catalogo</a></li>
+                <li class="nav__li"><i class="fa-solid fa-circle-info"></i>
+                    <a href="#">Más información</a></li>
+                <li class="nav__li"><i class="fa-solid fa-user"></i><a href="#">Perfil</a></li>
+            </ul>
+
+            <ul class="nav__responsive-ul">
+                <div class="nav__responsive-button-container">
+                    <!--Se puede definir más de dos clases al separar con un espacio, en este caso se
+                    incluye un icono de barra-->
+                    <div class="nav__responsive-button fa-solid fa-bars"></div>
+                </div>
+                <div class="nav__li-container">
+                    <li class="nav__responsive-li"><i class="fa-solid fa-house"></i><a href="#">Inicio</a></li>
+                    <li class="nav__responsive-li"><i class="fa-solid fa-square-plus"></i><a href="#">Catalogo<a></li>
+                    <li class="nav__responsive-li"><i class="fa-solid fa-circle-info"></i><a href="#">Más información</a></li>
+                    <li class="nav__responsive-li"><i class="fa-solid fa-user"></i><a href="#">Perfil</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

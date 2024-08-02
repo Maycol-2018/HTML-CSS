@@ -1,0 +1,135 @@
+*
+{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 5xp;
+}
+
+.nav__responsive-ul
+{
+    /*Oculta el segundo menu el cual es responsive*/
+    display: none;
+}
+
+.nav
+{
+    background-color: rgb(44, 193, 235);
+}
+
+.nav__li
+{
+    display: inline-block;
+    padding: 9px;
+    color: #fff;
+}
+
+.nav__li a
+{
+    color:#fff;
+    /*Quita la linea inferior del enlace*/
+    text-decoration: none;
+}
+
+/*Cambios aplicados a la etiqueta "a" contiene los enlaces que se encuentra en la clase nav__li*/
+.nav__li:hover > a
+{
+    color:#bbb;
+}
+
+.nav__li i
+{
+    text-align: right;
+    margin-right: 4px;
+}
+
+/*Cambios aplicados a la etiqueta "i" contiene los iconos que se encuentra en la clase nav__li*/
+.nav__li:hover i
+{
+    color:#bbb;
+}
+
+/*No importa definir el boton de barra "desplegable" afuera de max-width:500px, igual solo aparecera cuado la 
+pantalla sea de ese tamaño*/
+.nav__responsive-button-container
+{
+    position: absolute;
+    width: 100%;
+    font-size: 16px;
+    background-color: #7af;
+    /*El valor es la suma del padding y el margin de la clase .nav__responsive-ul. Pues de esta manera
+    se puede ubicar en la parte superior sin ocultar las opciones del menú.*/
+    margin-top: -57px;
+    z-index: 100;
+}
+
+.nav__responsive-button
+{
+    padding: 8px;
+    width: 100%;
+    text-align: right;
+}
+
+@media only screen and (max-width:500px)
+{
+    .nav__ul
+    {
+        display: none;
+    }
+
+    .nav
+    {
+        /*Es la altura total del boton de barra (padding+font-size), para que los elementos se oculten*/
+        height: 32px;
+        width: 100%;
+        background-color: #7af;
+    }
+
+    .nav__responsive-ul
+    {
+        display: block;
+        /*Tanto el width y el height del elemento ul es cero, es por eso que los elementos que 
+        contiene se acercan más.*/
+        position: absolute;
+        width: 100%;
+        /*Tiene el margin del height del nav*/
+        margin-top: 32px;
+
+        padding-top:25px;
+        height: 25px;
+    }
+
+    /*Se va a ocultar las opciones del menú, dejando solo visible el boton de menú desplegable*/
+    .nav__li-container
+    {
+        position: relative;
+        top:-1000px;
+        height: 130px;
+        background-color: #48e;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+
+    .nav__responsive-li
+    {
+        width: 100%;
+        padding: 6px;
+    }
+
+    .nav__responsive-li i 
+    {
+        box-sizing: border-box;
+        text-align: center;
+        width: 30px;
+        color: #fff;
+    }
+
+    .nav__responsive-li a
+    {
+        color:#fff;
+        text-decoration: none;
+    }
+
+    .nav__responsive-ul:hover > .nav__li-container
+    {
+        top: -25px;
+    }
+}
